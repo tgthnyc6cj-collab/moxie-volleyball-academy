@@ -11,3 +11,11 @@
 
 /* Place the homepage badge on the lower-right edge, clear of the coach's face. */
 .hero-visual .circle{top:calc(92% - 40px)}
+
+
+/* Interest form */
+#interest-form label{font-size:13px;font-weight:600;margin-top:18px}#interest-form label span{font-weight:400;opacity:.7}#interest-form input{padding:12px 3px}#interest-form input:focus-visible,#interest-form button:focus-visible{outline:2px solid #d29e83;outline-offset:5px}#interest-form button:disabled{cursor:default;opacity:.6}#interest-privacy{margin-top:20px;line-height:1.5;opacity:.8}#interest-status{display:block;min-height:3em;line-height:1.5;margin-top:16px}#interest-status[data-state=error]{color:#ffd1bc}#interest-status[data-state=success]{color:#d0ebdc}
+
+#interest-form .interest-honey{display:none}#interest-privacy a{color:inherit;text-decoration:underline}
+
+.interest-direct{margin-top:18px;line-height:1.5}.interest-direct a{color:inherit;text-decoration:underline}
