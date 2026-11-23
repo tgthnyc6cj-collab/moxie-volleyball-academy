@@ -7,9 +7,60 @@
 .tryout-announcement p:last-child{margin-bottom:0}
 .tryout-teams{display:flex;flex-wrap:wrap;gap:12px 32px;list-style:none;margin:24px 0;padding:16px 0;border-block:2px solid var(--ink);font:700 clamp(26px,5vw,44px) 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:var(--teal)}
 @media(max-width:600px){.tryouts{padding:65px 5vw}.tryout-announcement{padding:24px 20px}}
-.coach-name{font:600 clamp(26px,4vw,46px) 'Space Grotesk',sans-serif;margin:42px 0 0;letter-spacing:-.04em}.kasey-coach{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(320px,1.2fr);gap:clamp(35px,8vw,140px);align-items:start;margin-top:85px;padding-top:65px;border-top:1px solid #201e1d33}.kasey-art{aspect-ratio:1086/640;overflow:hidden;border-radius:20px}.kasey-art img{display:block;width:100%;height:auto;border-radius:0}.kasey-kicker{display:block;font-size:11px;font-weight:800;letter-spacing:.17em;color:#a85c40}.coach-bio .kasey-name{font:600 clamp(35px,4.5vw,66px) 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:var(--ink);margin:18px 0 24px;line-height:1}@media(max-width:750px){.kasey-coach{grid-template-columns:1fr;margin-top:55px;padding-top:45px}.kasey-art{max-width:470px;margin:auto}.coach-name{margin-top:30px}}</style></head><body>
+.coach-name{font:600 clamp(26px,4vw,46px) 'Space Grotesk',sans-serif;margin:42px 0 0;letter-spacing:-.04em}.kasey-coach{display:grid;grid-template-columns:minmax(250px,.8fr) minmax(320px,1.2fr);gap:clamp(35px,8vw,140px);align-items:start;margin-top:85px;padding-top:65px;border-top:1px solid #201e1d33}.kasey-art{aspect-ratio:1086/640;overflow:hidden;border-radius:20px}.kasey-art img{display:block;width:100%;height:auto;border-radius:0}.kasey-kicker{display:block;font-size:11px;font-weight:800;letter-spacing:.17em;color:#a85c40}.coach-bio .kasey-name{font:600 clamp(35px,4.5vw,66px) 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:var(--ink);margin:18px 0 24px;line-height:1}@media(max-width:750px){.kasey-coach{grid-template-columns:1fr;margin-top:55px;padding-top:45px}.kasey-art{max-width:470px;margin:auto}.coach-name{margin-top:30px}}
+/* Christmas homepage */
+.christmas-greeting {
+  margin: 0;
+  padding: 12px 5vw;
+  background: #183f40;
+  color: var(--paper);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.christmas-greeting span { color: #ffd49a; margin-inline: .45em; }
+.hero {
+  background: radial-gradient(ellipse at 78% 20%, #f5dfc5, transparent 60%), var(--paper);
+}
+.hero .arch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 19px 29px, #fff9ecb8 0 1.2px, transparent 2px) 0 0 / 103px 113px,
+    radial-gradient(circle at 39px 17px, #fff9ec90 0 1.6px, transparent 2.4px) 0 0 / 151px 131px;
+}
+.christmas-lights {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 15%;
+  right: 0;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  pointer-events: none;
+  border-top: 1px solid #644a36;
+  border-radius: 50% 50% 0 0;
+}
+.christmas-lights span {
+  width: 8px;
+  height: 13px;
+  margin-top: 2px;
+  border-radius: 3px 3px 50% 50%;
+  background: #ffd49a;
+  box-shadow: 0 0 11px #e7a048;
+}
+.christmas-lights span:nth-child(3n + 2) { background: #e28e75; box-shadow: 0 0 10px #c3664e; }
+.christmas-lights span:nth-child(3n) { background: #d1ede0; box-shadow: 0 0 10px #6cab98; }
+@media (max-width: 850px) {
+  .christmas-lights { left: 5%; right: 5%; }
+}
+</style></head><body>
 <header><a class="logo" href="#top"><img src="moxie-logo.png" alt="Moxie M with cactus logo"><div><b>MOXIE</b><small>VOLLEYBALL ACADEMY</small></div></a><nav><a href="#story">Our Story</a><a href="#training">Training</a><a href="#teams">Teams</a><a href="#coach">Coaches Corner</a><a href="#tryouts">Tryouts</a><a href="#instagram">Instagram</a></nav><a class="pill" href="#contact">Join the Academy</a><button class="menu">☰</button></header>
-<main id="top"><section class="hero"><div class="hero-copy"><div class="eyebrow">GILBERT, ARIZONA — EST. 2026</div><h1>COURAGE<br>LOOKS GOOD<br><i>ON YOU.</i></h1><p>Moxie is where ambitious athletes become confident volleyball players—and even stronger people.</p><div class="actions"><a class="pill copper" href="#tryouts">Explore 2027 Tryouts</a><a class="textlink" href="#story">Discover Moxie ↓</a></div></div><div class="hero-visual"><div class="arch"><img src="volleyball-action-10.jpg" alt="Volleyball player number 10 jumping to attack near the net" fetchpriority="high"></div><div class="float-card"><span>OUR STANDARD</span><b>CONFIDENCE<br>CHARACTER<br>COMMUNITY<br>COMPETITION</b></div><div class="circle"><img src="moxie-logo.png" alt="Moxie M with cactus emblem"></div></div></section>
+<main id="top"><p class="christmas-greeting"><span aria-hidden="true">✦</span>Merry Christmas from Moxie Volleyball Academy!<span aria-hidden="true">✦</span></p><section class="hero"><div class="hero-copy"><div class="eyebrow">GILBERT, ARIZONA — EST. 2026</div><h1>COURAGE<br>LOOKS GOOD<br><i>ON YOU.</i></h1><p>Moxie is where ambitious athletes become confident volleyball players—and even stronger people.</p><div class="actions"><a class="pill copper" href="#tryouts">Explore 2027 Tryouts</a><a class="textlink" href="#story">Discover Moxie ↓</a></div></div><div class="hero-visual"><div class="christmas-lights" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div><div class="arch"><img src="volleyball-action-10.jpg" alt="Volleyball player number 10 jumping to attack near the net" fetchpriority="high"></div><div class="float-card"><span>OUR STANDARD</span><b>CONFIDENCE<br>CHARACTER<br>COMMUNITY<br>COMPETITION</b></div><div class="circle"><img src="moxie-logo.png" alt="Moxie M with cactus emblem"></div></div></section>
 <section class="ticker"><span>MORE THAN A GAME</span><i>✦</i><span>ARIZONA ROOTED</span><i>✦</i><span>ATHLETE DRIVEN</span><i>✦</i><span>PLAY WITH MOXIE</span></section>
 <section class="story" id="story"><div class="story-label">01 / THE IDEA</div><div><h2>NOT ANOTHER<br>VOLLEYBALL CLUB.</h2><p class="lead">We’re building the kind of academy we’d want our own athletes to grow up in.</p></div><div class="story-copy"><p>Training matters. Winning matters. But the person inside the jersey matters more. Moxie develops complete athletes through demanding training, meaningful relationships and a culture that rewards courage.</p><p>Every rep has a purpose. Every athlete has a voice. Every team represents something bigger.</p></div></section>
 <section class="statement"><div class="sun"></div><div class="statement-copy"><small>WHAT DOES MOXIE MEAN?</small><h2>THE NERVE<br>TO <em>GO FOR IT.</em></h2><p>Boldness with purpose. Confidence earned through preparation. The willingness to compete when the moment gets big.</p></div></section>
