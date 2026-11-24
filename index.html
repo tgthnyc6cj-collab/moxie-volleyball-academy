@@ -13,19 +13,19 @@
 .christmas .holiday-greeting {
   display: block;
   padding: clamp(24px, 4vw, 48px) 5vw;
-  background: radial-gradient(ellipse at center, #285f60, #153a3e 75%);
+  background: #102b2b;
   border-bottom: 1px solid #d9b878;
   text-align: center;
   color: #fffaf0;
 }
 .holiday-greeting > * { margin: 0; }
-.holiday-greeting .holiday-stars { color: #f0d39c; letter-spacing: .45em; }
+.holiday-greeting .holiday-stars { color: #d9bc85; letter-spacing: .45em; }
 .holiday-greeting h2 {
   margin: 6px 0;
   font: 700 clamp(32px, 6vw, 68px)/1 'Space Grotesk', sans-serif;
   letter-spacing: -.035em;
 }
-.holiday-family { font-weight: 700; letter-spacing: .13em; color: #f0d39c; }
+.holiday-family { font-weight: 700; letter-spacing: .13em; color: #d9bc85; }
 .holiday-greeting .holiday-wish { margin-top: 10px; line-height: 1.55; }
 .christmas header .logo { position: relative; }
 .christmas .holiday-hat {
@@ -75,17 +75,34 @@
   background: #fff4ce;
   box-shadow: 0 0 9px 2px #f5cf85, 0 1px 2px #4d3727;
 }
+.christmas .tryouts { background: #102b2b; color: #ffffff; }
 .christmas .tryout-announcement {
-  border: 2px solid #dbbd81;
-  box-shadow: inset 0 0 0 4px #fff8e9;
+  background: #102b2b;
+  color: #ffffff;
+  border: 1px solid #d9bc85;
 }
-.christmas .tryout-teams { border-block-color: #c39b55; }
+.christmas .tryout-announcement .holiday-stars {
+  display: block;
+  color: #d9bc85;
+  letter-spacing: .45em;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+.christmas .tryout-teams {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  border-block-color: #456963;
+}
 .christmas .tryout-teams li {
-  padding: 8px 18px;
-  border: 1px solid #c39b55;
+  padding: 10px 8px;
+  border: 1px solid #d9bc85;
   border-radius: 10px;
-  background: #194749;
-  color: #fff9ed;
+  background: #102b2b;
+  color: #ffffff;
+  text-align: center;
+  font-size: clamp(18px, 4vw, 44px);
 }
 .christmas .holiday-snow {
   display: block;
@@ -115,7 +132,7 @@
 <div class="seasonal holiday-snow" aria-hidden="true"></div>
 <header><a class="logo" href="#top"><img src="moxie-logo.png" alt="Moxie M with cactus logo"><span class="seasonal holiday-hat" aria-hidden="true"></span><div><b>MOXIE</b><small>VOLLEYBALL ACADEMY</small></div></a><nav><a href="#story">Our Story</a><a href="#training">Training</a><a href="#teams">Teams</a><a href="#coach">Coaches Corner</a><a href="#tryouts">Tryouts</a><a href="#instagram">Instagram</a></nav><a class="pill" href="#contact">Join the Academy</a><button class="menu">☰</button></header>
 <main id="top"><section class="seasonal holiday-greeting" aria-labelledby="holiday-heading">
-  <p class="holiday-stars" aria-hidden="true">✦ ❄ ✦</p>
+  <p class="holiday-stars" aria-hidden="true">✦ ❄ ✦ ❄ ✦</p>
   <h2 id="holiday-heading">Merry Christmas</h2>
   <p class="holiday-family">FROM THE MOXIE FAMILY</p>
   <p class="holiday-wish">One Club. Two Teams. One Family.<br>Wishing our athletes and families a wonderful holiday season.</p>
@@ -131,6 +148,7 @@
     <span>05 / TRYOUT INFORMATION</span>
     <h2 id="tryout-heading">Thank You, Moxie Family!</h2>
     <div class="tryout-announcement">
+      <p class="seasonal holiday-stars" aria-hidden="true">✦ ❄ ✦ ❄ ✦</p>
       <p>Thank you to all the athletes, parents, coaches, and supporters who helped make Moxie Volleyball Academy’s inaugural tryouts a success! We are incredibly excited to officially welcome our two teams for the 2026–2027 season!</p>
       <ul class="tryout-teams" role="list">
         <li>15 RISE</li>
