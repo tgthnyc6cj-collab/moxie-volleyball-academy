@@ -110,18 +110,38 @@
   inset: 0;
   z-index: 6;
   pointer-events: none;
-  opacity: .52;
-  background:
-    radial-gradient(circle at 15px 21px, #fff 1px, transparent 2px) 0 0 / 113px 149px,
-    radial-gradient(circle at 38px 56px, #fff 1.5px, transparent 2.5px) 0 0 / 181px 211px;
-  animation: holiday-snowfall 27s linear infinite;
+  overflow: hidden;
 }
-@keyframes holiday-snowfall { to { background-position: 113px 298px, 181px 422px; } }
+.holiday-snow::before,
+.holiday-snow::after {
+  content: "";
+  position: absolute;
+  inset: -260px -220px 0 0;
+  background:
+    radial-gradient(circle at 19px 23px, #fff 0 2.4px, #557678b3 3px, transparent 4px),
+    radial-gradient(circle at 73px 88px, #fff 0 1.6px, #55767899 2.2px, transparent 3.2px);
+  background-size: 154px 197px;
+  animation: holiday-snowfall 8s linear infinite;
+}
+.holiday-snow::after {
+  background:
+    radial-gradient(circle at 42px 59px, #fff 0 3px, #557678b3 3.6px, transparent 5px),
+    radial-gradient(circle at 119px 143px, #fff 0 2px, #55767899 2.7px, transparent 3.7px);
+  background-size: 220px 260px;
+  animation: holiday-snowfall-near 6s linear infinite;
+}
+@keyframes holiday-snowfall {
+  to { background-position: -154px 394px; }
+}
+@keyframes holiday-snowfall-near {
+  to { background-position: -220px 520px; }
+}
 @media (max-width: 850px) {
   .christmas .holiday-lights { left: 5%; right: 5%; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .christmas .holiday-snow { animation: none; }
+  .holiday-snow::before,
+  .holiday-snow::after { animation: none; }
 }
 </style><script>
   const phoenixDate = new Intl.DateTimeFormat('sv-SE', {timeZone: 'America/Phoenix', year: 'numeric', month: '2-digit', day: '2-digit'}).format(new Date());
